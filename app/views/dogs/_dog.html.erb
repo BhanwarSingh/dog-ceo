@@ -1,0 +1,10 @@
+<div id= 'dog-details'>
+  <div class="p-4">
+    <% if @dog&.success %>
+      <div><h5><%= @dog.breed %></h5></div>
+      <img src="<%= @dog.image_url %>" alt="Dog Image">
+    <% else %>
+      <div><%= @dog&.message %></div>
+    </div>
+  <% end %>
+</div>

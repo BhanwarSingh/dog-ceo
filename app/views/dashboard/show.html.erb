@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="p-4">
+        <div class="card p-4">
+          <%= form_with url: 'dogs', method: :post do |form| %>
+            <div class="mb-3">
+              <%= form.label :breed, 'Enter Dog Breed', class: "form-label" %>
+              <%= form.text_field :breed, class: "form-control" %>
+            </div>
+            <%= form.submit "Submit", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-12">
+      <%= render partial: 'dogs/dog' %>
+    </div>
+  </div>
+</div>
